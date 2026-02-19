@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W-Space | Bengaluru Workspace</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .places-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .place-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease-in-out;
+            
+            text-align: center;
+        }
+        .place-card:hover {
+            transform: translateY(-5px);
+        }
+        .place-card i {
+            font-size: 50px;
+            margin-bottom: 10px;
+            color: #007BFF;
+        }
+        .faq-section {
+            max-width: 900px;
+            margin: auto;
+            padding: 40px;
+        }
+        .faq-item {
+            background: #f9f9f9;
+            margin-bottom: 10px;
+            padding: 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            border: 1px solid #ddd;
+        }
+        .faq-item h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+        .faq-answer {
+            display: none;
+            padding-top: 10px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">W-Space</div>
+        <ul class="nav-links">
+             <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#solutions">Solutions</a></li>
+            <li><a href="index.html#locations">Locations</a></li>
+            <li><a href="index.html#amenities">Amenities</a></li>
+            <li><a href="bengaluru.html#locations">Book Now</a></li>
+            <li><a href="about.html">About us</a></li>
+        </ul>
+        <!--<div class="user-controls">
+            <span id="user-status" class="user-status">You are not logged in.</span>
+            <button id="login-btn" class="login-btn">Log In</button>
+            <button id="logout-btn" class="logout-btn" style="display:none;">Log Out</button>
+        </div>-->
+    </nav>
+
+    <header class="hero" style="background: url('https://wallpapercave.com/wp/wp6590071.jpg') center/cover no-repeat; height: 300px;">
+        <div class="hero-content" style="color:white;text-align:center;padding-top:100px;">
+            <h1>Bengaluru Workspace</h1>
+            <p>Choose your perfect location in Bengaluru for productive work.</p>
+        </div>
+    </header>
+
+     <section id="locations" class="section">
+        <h2 style="text-align:center;">Choose a Location in Bengaluru</h2>
+        <div class="places-grid">
+            <div class="place-card" >
+                <i class="fas fa-building"></i>
+               <a class="white" href="whitefield.html"><h3> Whitefield</h3></a>
+                <p>High-tech hub with great amenities and transport access.</p>
+            </div>
+            <div class="place-card" >
+                <i class="fas fa-city"></i>
+               <a class="white" href="whitefield.html"> <h3>MG Road</h3></a>
+                <p>Heart of Bengaluru with vibrant coworking spaces.</p>
+            </div>
+            <div class="place-card" >
+                <i class="fas fa-laptop-code"></i>
+                <a class="white" href="whitefield.html"> <h3>Electronic City</h3></a>
+                <p>Best for IT companies with modern facilities.</p>
+            </div>
+            <div class="place-card" >
+                <i class="fas fa-coffee"></i>
+                <a class="white" href="whitefield.html"> <h3>Koramangala</h3></a>
+                <p>Trendy coworking area with vibrant startup culture.</p>
+            </div>
+            <div class="place-card" >
+            <i class="fas fa-store"></i>
+            <a class="white" href="whitefield.html"> <h3>Indiranagar</h3></a>
+            <p>Trendy neighbourhood with cafes, restaurants, and a creative vibe.</p>
+        </div>
+        <div class="place-card" >
+            <i class="fas fa-water"></i>
+           <a class="white" href="whitefield.html"> <h3>Ulsoor Lake</h3></a>
+            <p>Scenic location with serene surroundings and premium workspaces.</p>
+        </div>
+        </div>
+    </section>
+
+    <section class="faq-section">
+    <h2 style="text-align:center;">FAQs</h2>
+
+    <div class="faq-item">
+        <h3>How do I book a workspace in Bengaluru?</h3>
+        <div class="faq-answer">
+            <p>Click on your desired location above, choose your date and time, and follow the booking process on the booking page.</p>
+        </div>
+    </div>
+     <div class="faq-item">
+        <h3>What facilities are provided in the meeting rooms?</h3>
+        <div class="faq-answer">
+            <ul style="list-style:disc; padding-left:20px; color:#444;">
+                <li>High-speed Wi-Fi</li>
+                <li>Projector & Whiteboard</li>
+                <li>Complimentary Tea & Coffee</li>
+                <li>Comfortable seating with AC</li>
+                <li>24x7 Power Backup</li>
+                <li>Reception Assistance</li>
+            </ul>
+        </div>
+        </div>
+    <div class="faq-item">
+        <h3>Are meeting rooms available on hourly basis?</h3>
+        <div class="faq-answer">
+            <p>Yes, meeting rooms and private offices can be booked by the hour to match your requirements.</p>
+        </div>
+    </div>
+    <div class="faq-item">
+        <h3>Do you provide parking facilities?</h3>
+        <div class="faq-answer">
+            <p>Yes, most of our locations provide dedicated parking for members. Parking availability varies by location.</p>
+        </div>
+    </div>
+    <div class="faq-item">
+        <h3>Can I book for multiple days?</h3>
+        <div class="faq-answer">
+            <p>Yes, our booking system allows you to reserve workspaces for multiple consecutive days depending on availability.</p>
+        </div>
+    </div>
+    <div class="faq-item">
+        <h3>What safety measures are followed?</h3>
+        <div class="faq-answer">
+            <p>We follow strict safety protocols including regular sanitization, contactless check-in, and adherence to local COVID-19 guidelines.</p>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-section about">
+            <h3>W-Space</h3>
+            <p>Flexible office spaces, coworking, and on-demand solutions to help teams grow and collaborate across India.</p>
+        </div>
+
+        <div class="footer-section links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="index.html#solutions">Solutions</a></li>
+                <li><a href="index.html#locations">Locations</a></li>
+                <li><a href="index.html#amenities">Amenities</a></li>
+                <li><a href="bengaluru.html#locations">Book Now</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </div>
+
+     
+        <div class="footer-section contact">
+            <h4>Contact Us</h4>
+            <p><i class="fas fa-map-marker-alt"></i> 123 Business Street, Bengaluru, India</p>
+          <p class="phone"><a class="phone" href="https://www.phone.com/">📞 +91 98765 43210</a></p>
+         <a class="phone" href="https://www.gmail.com/" ><i class="fas fa-envelope"></i> <span class="__cf_email__" data-cfemail="e38a8d858ca3949093828086cd808c8e">[email&#160;protected]</span></p></a> 
+            <div class="social-icons">
+                <a href="https://www.facebook.com/"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
+                <a href="https://x.com/?lang=en-in"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter"></a>
+                <a href="https://in.linkedin.com/"><img src="https://tse1.mm.bing.net/th/id/OIP.TBTVLp4-Lym6qNu_5Pp4dwAAAA?w=400&h=400&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Linkdin"></i></a>
+                <a href="https://www.instagram.com/"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 W-Space. All Rights Reserved.</p>
+        <a class="footer-bottom-a" href="privacy.html">Privacy Policy</a> | 
+        <a class="footer-bottom-a" href="terms.html">Terms & Conditions</a>
+    </div>
+</footer>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.addEventListener('click', () => {
+                const answer = item.querySelector('.fa

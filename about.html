@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | W-Spaces</title>
+     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General styles */
+        :root {
+            --primary-color: #0077b6;
+            --secondary-color: #f1faee;
+            --accent-color: #43aa8b;
+            --text-color: #333;
+            --light-bg: #e9ecef;
+            --card-bg: #ffffff;
+            --border-color: #ced4da;
+            --shadow-color: rgba(0, 0, 0, 0.1);
+        }
+
+        * { box-sizing: border-box; margin:0; padding:0; }
+        body { font-family: 'Poppins', sans-serif; line-height:1.6; background-color: var(--light-bg); color: var(--text-color); }
+
+
+        /* Hero Section */
+        .hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url('https://us.v-cdn.net/5021068/uploads/editor/nw/pty8n1sqqnrx.jpg') 
+        no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 8rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    text-shadow: 1px 1px 8px rgba(0,0,0,0.6);
+}
+
+
+        /* Sections */
+        .section { padding:4rem 2rem; max-width:1200px; margin:0 auto; }
+        .section h2 { font-size:2.5rem; font-weight:700; margin-bottom:2rem; color: var(--primary-color); }
+
+        /* About Section */
+        .about-section { display:flex; flex-wrap:wrap; align-items:center; gap:2rem; text-align:left; }
+        .about-content { flex:1; min-width:300px; }
+        .about-content p { font-size:1.1rem; line-height:1.8; }
+        .about-image { flex:1; min-width:300px; }
+        .about-image img { width:100%; border-radius:10px; box-shadow:0 4px 20px var(--shadow-color); }
+
+        /* Mission & Vision */
+        .mission-vision { display:flex; justify-content:center; flex-wrap:wrap; gap:3rem; text-align:center; }
+        .mission, .vision { flex:1; min-width:250px; }
+        .mission i, .vision i { color: var(--primary-color); margin-bottom:1rem; font-size:2.5rem; }
+
+        /* Values */
+        .values-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); gap:2rem; margin-top:2rem; }
+        .value-card {
+            background-color: var(--card-bg);
+            padding:2rem;
+            border-radius:10px;
+            text-align:center;
+            box-shadow:0 4px 20px var(--shadow-color);
+            transition: transform 0.3s ease;
+        }
+        .value-card:hover { transform: translateY(-10px); }
+        .value-card i { font-size:2.5rem; color: var(--accent-color); margin-bottom:1rem; }
+        .value-card h4 { font-size:1.5rem; margin-bottom:0.5rem; }
+        .value-card p { font-size:1rem; }
+
+        /* Contact Section */
+        .contact-section { background-color: var(--secondary-color); border-radius:10px; padding:2rem; margin-top:3rem; }
+        .contact-section h2 { text-align:center; margin-bottom:2rem; color: var(--primary-color); }
+        .contact-grid { display:flex; flex-wrap:wrap; gap:2rem; justify-content:center; }
+        .contact-card { flex:1; min-width:250px; background-color: var(--card-bg); padding:1.5rem; border-radius:10px; text-align:center; box-shadow:0 4px 20px var(--shadow-color); }
+        .contact-card i { font-size:2rem; color: var(--primary-color); margin-bottom:1rem; }
+        .contact-card h4 { margin-bottom:0.5rem; }
+        .contact-card p { font-size:0.95rem; line-height:1.6; }
+        .contact-card a { color: var(--accent-color); text-decoration:none; }
+        .contact-card a:hover { text-decoration:underline; }
+
+        /* CTA Section */
+        .cta-section { text-align:center; background-color: var(--secondary-color); padding:3rem 2rem; margin-top:3rem; }
+        .cta-section h2 { font-size:2.5rem; color: var(--primary-color); margin-bottom:1rem; }
+        .cta-section p { font-size:1.2rem; margin-bottom:2rem; }
+        .cta-button {
+            background-color: var(--accent-color);
+            color:white;
+            padding:1rem 2.5rem;
+            text-decoration:none;
+            border-radius:50px;
+            font-weight:600;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .cta-button:hover { background-color:#388b72; transform: translateY(-3px); }
+
+        /* Responsive */
+        @media(max-width:768px){
+            .navbar { flex-direction:column; gap:1rem; }
+            .nav-links { gap:1rem; flex-wrap:wrap; justify-content:center; }
+            .hero-content h1 { font-size:2.2rem; }
+            .section h2 { font-size:2rem; }
+            .about-section { flex-direction:column; }
+            .mission-vision { flex-direction:column; }
+            .contact-grid { flex-direction:column; }
+        }
+        </style>
+</head>
+<body>
+
+       <nav class="navbar">
+        <div class="logo">W-Space</div>
+        <ul class="nav-links">
+             <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#solutions">Solutions</a></li>
+            <li><a href="index.html#locations">Locations</a></li>
+            <li><a href="index.html#amenities">Amenities</a></li>
+            <li><a href="bengaluru.html#locations">Book Now</a></li>
+            <li><a href="about.html">About us</a></li>
+        </ul>
+        <!--<div class="user-controls">
+            <span id="user-status" class="user-status">You are not logged in.</span>
+            <button id="login-btn" class="login-btn">Log In</button>
+            <button id="logout-btn" class="logout-btn" style="display:none;">Log Out</button>
+        </div>-->
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>About W-Space</h1>
+            <p>Empowering businesses with flexible, collaborative, and inspiring workspace across India.</p>
+        </div>
+    </header>
+
+    <section class="section about-section">
+        <div class="about-content">
+            <h2>Who We Are</h2>
+            <p>W-Spaces is a leading provider of flexible workspace, coworking hubs, and on-demand office solutions. Our mission is to create inspiring environments that allow individuals and teams to thrive, collaborate, and grow. With locations across major cities in India, we bring productivity, convenience, and innovation under one roof.</p>
+        </div>
+        <div class="about-image">
+            <img src="https://speechi.com/wp-content/uploads/2022/09/tarif-ecran-salle-de-conference.jpg" alt="Team working in office">
+        </div>
+    </section>
+
+    <section class="section mission-vision">
+        <div class="mission">
+            <i class="fas fa-bullseye"></i>
+            <h3>Our Mission</h3>
+            <p>To provide world-class, flexible workspace that empower businesses and professionals to succeed.</p>
+        </div>
+        <div class="vision">
+            <i class="fas fa-lightbulb"></i>
+            <h3>Our Vision</h3>
+            <p>To revolutionize the way people work by creating connected, collaborative, and productive communities everywhere.</p>
+        </div>
+    </section>
+
+    <section class="section values-section">
+        <h2>Our Core Values</h2>
+        <div class="values-grid">
+            <div class="value-card">
+                <i class="fas fa-users"></i>
+                <h4>Collaboration</h4>
+                <p>We foster a community-driven environment to encourage teamwork and innovation.</p>
+            </div>
+            <div class="value-card">
+                <i class="fas fa-lightbulb"></i>
+                <h4>Innovation</h4>
+                <p>We continuously adapt and implement creative solutions for modern work challenges.</p>
+            </div>
+            <div class="value-card">
+                <i class="fas fa-hand-holding-heart"></i>
+                <h4>Integrity</h4>
+                <p>We value transparency, honesty, and accountability in everything we do.</p>
+            </div>
+            <div class="value-card">
+                <i class="fas fa-cogs"></i>
+                <h4>Efficiency</h4>
+                <p>Our spaces and services are designed to maximize productivity and minimize hassle.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section class="section contact-section">
+        <h2>Contact Us</h2>
+        <div class="contact-grid">
+            <div class="contact-card">
+                <i class="fas fa-map-marker-alt"></i>
+                <h4>Our Address</h4>
+                <p>123 Business Street, Bengaluru, India</p>
+            </div>
+            <div class="contact-card">
+                <i class="fas fa-phone-alt"></i>
+                <h4>Phone</h4>
+                <p>+91 98765 43210</p>
+            </div>
+            <div class="contact-card">
+                <i class="fas fa-envelope"></i>
+                <h4>Email</h4>
+                <p><a href="/cdn-cgi/l/email-protection#81e8efe7eec1f6f2f1e0e2e4f2afe2eeec"><span class="__cf_email__" data-cfemail="1e777078715e696d6e7f7d7b307d7173">[email&#160;protected]</span></a></p>
+            </div>
+            <div class="contact-card">
+                <i class="fas fa-globe"></i>
+                <h4>Website</h4>
+                <p><a href="index.html">www.wspace.com</a></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section cta-section">
+        <h2>Join W-Spaces Today</h2>
+        <p>Experience flexible workspace tailored to your business needs. Book a tour or reserve your desk now!</p>
+        <a href="index.html#locations" class="cta-button">Book Now</a>
+    </section>
+    <!-- Footer -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-section about">
+            <h3>W-Space</h3>
+            <p>Flexible office spaces, coworking, and on-demand solutions to help teams grow and collaborate across India.</p>
+        </div>
+
+        <div class="footer-section links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="index.html#solutions">Solutions</a></li>
+                <li><a href="index.html#locations">Locations</a></li>
+                <li><a href="index.html#amenities">Amenities</a></li>
+                <li><a href="index.html#locations">Book Now</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </div>
+
+     
+        <div class="footer-section contact">
+            <h4>Contact Us</h4>
+            <p><i class="fas fa-map-marker-alt"></i> 123 Business Street, Bengaluru, India</p>
+          <p class="phone"><a class="phone" href="https://www.phone.com/">📞 +91 98765 43210</a></p>
+         <a class="phone" href="https://www.gmail.com/" ><i class="fas fa-envelope"></i> <span class="__cf_email__" data-cfemail="b4dddad2dbf4c3c7c4d5d7d19ad7dbd9">[email&#160;protected]</span></p></a> 
+            <div class="social-icons">
+                <a href="https://www.facebook.com/"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
+                <a href="https://x.com/?lang=en-in"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter"></a>
+                <a href="https://in.linkedin.com/"><img src="https://tse1.mm.bing.net/th/id/OIP.TBTVLp4-Lym6qNu_5Pp4dwAAAA?w=400&h=400&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Linkdin"></i></a>
+                <a href="https://www.instagram.com/"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 W-Space. All Rig
